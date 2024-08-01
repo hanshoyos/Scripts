@@ -10,7 +10,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 
 # 2. Verify the Installation
 # This command checks that OpenSSH Server is installed and provides its installation status.
-Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+Get-WindowsCapability -Online | Where-Object Name -like 'sshd*'
 
 # 3. Start the OpenSSH Server Service
 # This command starts the OpenSSH server service, allowing it to begin accepting SSH connections.
