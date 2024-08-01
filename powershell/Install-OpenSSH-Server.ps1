@@ -1,4 +1,4 @@
-# PowerShell Script to Install and Configure OpenSSH Server on Windows
+ # PowerShell Script to Install and Configure OpenSSH Server on Windows
 
 # Introduction and Explanation
 # This script installs and configures the OpenSSH Server on Windows.
@@ -10,7 +10,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 
 # 2. Verify the Installation
 # This command checks that OpenSSH Server is installed and provides its installation status.
-Get-WindowsCapability -Online | Where-Object Name -like 'sshd*'
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
 # 3. Start the OpenSSH Server Service
 # This command starts the OpenSSH server service, allowing it to begin accepting SSH connections.
@@ -25,4 +25,4 @@ Set-Service -Name sshd -StartupType 'Automatic'
 Get-Service sshd
 
 # Script Execution
-# You can run this entire script at once or execute each command individually as needed.
+# You can run this entire script at once or execute each command individually as needed. 
